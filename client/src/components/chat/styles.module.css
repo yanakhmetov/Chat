@@ -1,0 +1,15 @@
+.chat {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Убираем скролл всего чата */
+}
+
+.main{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Занимаем всю высоту */
+    overflow: hidden; /* Убираем скролл основного контейнера */
+}

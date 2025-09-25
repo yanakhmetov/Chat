@@ -1,0 +1,33 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  transform: rotate(-20deg);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(-20deg);
+}
+
+/* Для мобильных устройств - увеличиваем область нажатия */
+@media (max-width: 768px) {
+  .theme-toggle {
+    bottom: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+  }
+}
