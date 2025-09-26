@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 import ThemeToggle from './components/chat/components/theme-toggle/ThemeToggle.jsx'
 import './App.css'
 
-const socket = socketIO.connect('http://localhost:5000')
+const socket = socketIO.connect('server-production-a986.up.railway.app')
 
 function App() {
   const [users, setUsers] = useState([])

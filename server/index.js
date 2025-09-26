@@ -7,7 +7,8 @@ const cors = require('cors')
 const socketIO = require('socket.io')(http, {
     cors: {
         origin: 'http://localhost:5173'
-    }
+    },
+    transports: ['websocket', 'polling']
 })
 
 app.get('api', (req, res) => {
