@@ -25,7 +25,7 @@
 /* Для мобильных устройств - увеличиваем область нажатия */
 @media (max-width: 768px) {
   .theme-toggle {
-    bottom: 15px;
+    top: 25px;
     left: 15px;
     width: 45px;
     height: 45px;

@@ -6,7 +6,10 @@ const http = require('http').Server(app)
 const cors = require('cors')
 const socketIO = require('socket.io')(http, {
     cors: {
-        origin: 'http://localhost:5173'
+        origin: [
+            'http://localhost:5173',
+            'https://chat-beta-swart.vercel.app'
+        ]
     },
     transports: ['websocket', 'polling']
 })
@@ -28,13 +31,11 @@ socketIO.on('connection', (socket) => {
 
     socket.on('newUser', (data) => {
         if(users.filter(u => ((u.user == data.user) || (u.socketID == data.socketID)) ).length == 0){
-            // console.log(users.filter(u => u.user == data.user ).length == 0)
+            
             users = [...users, data]
-
             socketIO.emit('responseNewUser', users)
             socketIO.emit('unknownUser', {nameCreate:'Вы придумали имя', user: data})
         } else {
-            // console.log(users.filter(u => u.user == data.user ).length == 0)
             socketIO.emit('haveThisUser', 'Имя занято, придумайте новое имя')
         }
         

@@ -85,9 +85,6 @@
 .messageContainer {
     display: flex;
     flex-direction: column;
-    /* max-width: 60%; */
-    /* min-width: auto; */
-    /* width: auto; */
     width: auto;
     margin: 4px 0;
 }
